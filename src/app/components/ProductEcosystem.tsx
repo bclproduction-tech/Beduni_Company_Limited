@@ -45,7 +45,7 @@ export function ProductEcosystem() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-center"
           >
-              <a href="./Hesabu-Safi/">
+              <a href="./hesabu-Safi/">
   <motion.button
     whileHover={{ scale: 1.05 }}
     whileTap={{ scale: 0.95 }}
