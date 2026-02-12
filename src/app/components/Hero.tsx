@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import heroimage from '../../../assets/hero.png';
+import heroimage from '../../assets/hero.png';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -71,11 +71,7 @@ export function Hero() {
         >
           <div className="backdrop-blur-xl bg-white/30 dark:bg-white/5 rounded-3xl border border-gray-200/50 dark:border-white/10 p-8 shadow-2xl">
             <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl overflow-hidden">
-              <img
-                src={heroimage}
-                alt="Education Technology"
-                className="w-full h-full object-cover"
-              />
+              <img src={heroimage} alt="hero" />
             </div>
           </div>
         </motion.div>

@@ -29,19 +29,21 @@ export function Navigation() {
       <div className="max-w-7xl mx-auto">
         <div className="backdrop-blur-xl bg-white/70 dark:bg-black/70 rounded-2xl border border-gray-200/20 dark:border-white/10 shadow-xl">
           <div className="flex items-center justify-between px-8 py-4">
-            {/* Logo */}
-
-            <img 
-              src={logo}
-              alt="BCL Logo"
-              className="w-10 h-10 rounded-full object-cover"
-            />
-
+                       {/* Logo */}
             <motion.div
               whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-400 dark:to-yellow-500 bg-clip-text text-transparent"
+              className="flex items-center gap-3"
             >
-              BCL
+<img 
+  src="src\assets\logo.jpeg" 
+  alt="BCL Logo" 
+  className="w-10 h-10 object-contain"
+/>
+
+              {/* Company Name */}
+              <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-400 dark:to-yellow-500 bg-clip-text text-transparent">
+                BCL
+              </div>
             </motion.div>
 
             {/* Desktop Navigation Links */}
