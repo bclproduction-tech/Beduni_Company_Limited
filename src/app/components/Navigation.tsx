@@ -35,7 +35,7 @@ export function Navigation() {
               className="flex items-center gap-3"
             >
 <img 
-  src="src\assets\logo.jpeg" 
+  src={logo}
   alt="BCL Logo" 
   className="w-10 h-10 object-contain"
 />
