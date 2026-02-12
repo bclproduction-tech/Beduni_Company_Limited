@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
-import heroimage from '../../assets/hero.png';
+import heroimage from '../../../assets/hero.png';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
