@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Moon, Sun, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from '@/app/context/ThemeContext';
-import logo from '../../assets/logo.jpeg';
 
 export function Navigation() {
   const { isDark, toggleTheme } = useTheme();
@@ -15,7 +14,7 @@ export function Navigation() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setActiveSection(id);
-      setMobileMenuOpen(false); // Close mobile menu after navigation
+      setMobileMenuOpen(false);
     }
   };
 
@@ -30,11 +29,6 @@ export function Navigation() {
         <div className="backdrop-blur-xl bg-white/70 dark:bg-black/70 rounded-2xl border border-gray-200/20 dark:border-white/10 shadow-xl">
           <div className="flex items-center justify-between px-8 py-4">
             {/* Logo */}
-            <img
-            src={logo}
-            alt="BCL Logo"
-            className="w-10 h-10 rounded-full object-cover"
-            />
             <motion.div
               whileHover={{ scale: 1.05 }}
               className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-400 dark:to-yellow-500 bg-clip-text text-transparent"
