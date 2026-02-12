@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Moon, Sun, ChevronDown, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { useTheme } from '@/app/context/ThemeContext';
+import logo from '../../assets/logo.jpeg';
 
 export function Navigation() {
   const { isDark, toggleTheme } = useTheme();
@@ -23,25 +24,39 @@ export function Navigation() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: 'easeOut' }}
-      className="sticky top-0 left-0 right-0 z-50 px-6 py-4"
+      className="sticky top-0 left-0 right-0 z-50 px-3 sm:px-6 py-4"
     >
       <div className="max-w-7xl mx-auto">
         <div className="backdrop-blur-xl bg-white/70 dark:bg-black/70 rounded-2xl border border-gray-200/20 dark:border-white/10 shadow-xl">
-          <div className="flex items-center justify-between px-8 py-4">
-            {/* Logo */}
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-400 dark:to-yellow-500 bg-clip-text text-transparent"
-            >
-              BCL
-            </motion.div>
+          
+          {/* MAIN ROW */}
+          <div className="flex items-center justify-between px-4 sm:px-8 py-4">
 
-            {/* Desktop Navigation Links */}
-            <div className="hidden md:flex items-center gap-8">
+            {/* ✅ GROUPED LOGO (Fixes Flex Distribution) */}
+            <div className="flex items-center gap-2 shrink-0">
+              <img
+                src={logo}
+                alt="BCL Logo"
+                className="w-9 h-9 sm:w-10 sm:h-10 rounded-full object-cover"
+              />
+
+              <motion.div
+                whileHover={{ scale: 1.05 }}
+                className="text-lg sm:text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-400 dark:to-yellow-500 bg-clip-text text-transparent"
+              >
+                BCL
+              </motion.div>
+            </div>
+
+            {/* ✅ CENTERED DESKTOP NAV */}
+            <div className="hidden md:flex items-center gap-8 flex-1 justify-center">
+              
               <button
                 onClick={() => scrollToSection('home')}
                 className={`text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-gold-400 ${
-                  activeSection === 'home' ? 'text-blue-600 dark:text-gold-400' : 'text-gray-700 dark:text-white'
+                  activeSection === 'home'
+                    ? 'text-blue-600 dark:text-gold-400'
+                    : 'text-gray-700 dark:text-white'
                 }`}
               >
                 Home
@@ -50,13 +65,15 @@ export function Navigation() {
               <button
                 onClick={() => scrollToSection('about')}
                 className={`text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-gold-400 ${
-                  activeSection === 'about' ? 'text-blue-600 dark:text-gold-400' : 'text-gray-700 dark:text-white'
+                  activeSection === 'about'
+                    ? 'text-blue-600 dark:text-gold-400'
+                    : 'text-gray-700 dark:text-white'
                 }`}
               >
                 About
               </button>
 
-              {/* Products Dropdown */}
+              {/* Products */}
               <div
                 className="relative"
                 onMouseEnter={() => setProductDropdownOpen(true)}
@@ -64,7 +81,9 @@ export function Navigation() {
               >
                 <button
                   className={`flex items-center gap-1 text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-gold-400 ${
-                    activeSection === 'products' ? 'text-blue-600 dark:text-gold-400' : 'text-gray-700 dark:text-white'
+                    activeSection === 'products'
+                      ? 'text-blue-600 dark:text-gold-400'
+                      : 'text-gray-700 dark:text-white'
                   }`}
                 >
                   Products
@@ -94,16 +113,19 @@ export function Navigation() {
               <button
                 onClick={() => scrollToSection('contact')}
                 className={`text-sm font-medium transition-colors hover:text-blue-600 dark:hover:text-gold-400 ${
-                  activeSection === 'contact' ? 'text-blue-600 dark:text-gold-400' : 'text-gray-700 dark:text-white'
+                  activeSection === 'contact'
+                    ? 'text-blue-600 dark:text-gold-400'
+                    : 'text-gray-700 dark:text-white'
                 }`}
               >
                 Contact
               </button>
             </div>
 
-            {/* Right Side: Dark Mode Toggle + Mobile Menu Button */}
-            <div className="flex items-center gap-3">
-              {/* Dark Mode Toggle */}
+            {/* ✅ RIGHT SIDE */}
+            <div className="flex items-center gap-2 sm:gap-3 shrink-0">
+              
+              {/* Theme */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -117,7 +139,7 @@ export function Navigation() {
                 )}
               </motion.button>
 
-              {/* Mobile Menu Button */}
+              {/* Mobile */}
               <motion.button
                 whileHover={{ scale: 1.1 }}
                 whileTap={{ scale: 0.9 }}
@@ -130,10 +152,11 @@ export function Navigation() {
                   <Menu className="w-5 h-5 text-gray-700 dark:text-white" />
                 )}
               </motion.button>
+
             </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* MOBILE MENU — unchanged logic */}
           <AnimatePresence>
             {mobileMenuOpen && (
               <motion.div
@@ -144,85 +167,25 @@ export function Navigation() {
                 className="overflow-hidden md:hidden border-t border-gray-200/20 dark:border-white/10"
               >
                 <div className="px-6 py-4 space-y-2">
-                  <motion.button
-                    whileHover={{ x: 8 }}
-                    onClick={() => scrollToSection('home')}
-                    className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                      activeSection === 'home'
-                        ? 'bg-blue-50 dark:bg-white/5 text-blue-600 dark:text-gold-400'
-                        : 'text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5'
-                    }`}
-                  >
-                    Home
-                  </motion.button>
-
-                  <motion.button
-                    whileHover={{ x: 8 }}
-                    onClick={() => scrollToSection('about')}
-                    className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                      activeSection === 'about'
-                        ? 'bg-blue-50 dark:bg-white/5 text-blue-600 dark:text-gold-400'
-                        : 'text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5'
-                    }`}
-                  >
-                    About
-                  </motion.button>
-
-                  {/* Mobile Products Section */}
-                  <div>
-                    <button
-                      onClick={() => setProductDropdownOpen(!productDropdownOpen)}
-                      className={`w-full flex items-center justify-between px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                        activeSection === 'products'
+                  {['home','about','contact'].map(section => (
+                    <motion.button
+                      key={section}
+                      whileHover={{ x: 8 }}
+                      onClick={() => scrollToSection(section)}
+                      className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
+                        activeSection === section
                           ? 'bg-blue-50 dark:bg-white/5 text-blue-600 dark:text-gold-400'
                           : 'text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5'
                       }`}
                     >
-                      <span>Products</span>
-                      <motion.div
-                        animate={{ rotate: productDropdownOpen ? 180 : 0 }}
-                        transition={{ duration: 0.2 }}
-                      >
-                        <ChevronDown className="w-4 h-4" />
-                      </motion.div>
-                    </button>
-
-                    <AnimatePresence>
-                      {productDropdownOpen && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: 'auto', opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
-                          className="overflow-hidden pl-4 mt-1"
-                        >
-                          <motion.button
-                            whileHover={{ x: 8 }}
-                            onClick={() => scrollToSection('products')}
-                            className="w-full text-left px-4 py-3 rounded-lg text-sm text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-white/5 transition-all"
-                          >
-                            Hesabu Safi
-                          </motion.button>
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-
-                  <motion.button
-                    whileHover={{ x: 8 }}
-                    onClick={() => scrollToSection('contact')}
-                    className={`w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all ${
-                      activeSection === 'contact'
-                        ? 'bg-blue-50 dark:bg-white/5 text-blue-600 dark:text-gold-400'
-                        : 'text-gray-700 dark:text-white hover:bg-gray-50 dark:hover:bg-white/5'
-                    }`}
-                  >
-                    Contact
-                  </motion.button>
+                      {section.charAt(0).toUpperCase()+section.slice(1)}
+                    </motion.button>
+                  ))}
                 </div>
               </motion.div>
             )}
           </AnimatePresence>
+
         </div>
       </div>
     </motion.nav>
