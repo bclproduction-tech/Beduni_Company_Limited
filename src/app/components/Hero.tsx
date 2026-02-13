@@ -13,9 +13,23 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-24">
-      {/* Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-blue-50 via-gray-50 to-blue-100 dark:from-black dark:via-gray-900 dark:to-black -z-10" />
-      
+      {/* Background Image */}
+      <div
+        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url(${heroimage})`,
+        }}
+      />
+
+      {/* LIGHT overlay (reduced so image stays sharp) */}
+      <div className="absolute inset-0 bg-white/7.5 dark:bg-black/7.5 -z-10" />
+
+      {/* Bottom Mist / Fog */}
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-80 -z-10">
+        <div className="w-full h-full bg-gradient-to-t from-white/90 via-white/50 to-transparent dark:from-black/90 dark:via-black/50" />
+      </div>
+
+      {/* CONTENT */}
       <div className="max-w-6xl mx-auto text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -27,14 +41,7 @@ export function Hero() {
           </h1>
         </motion.div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 max-w-4xl mx-auto"
-        >
-          Beduni Company Limited builds intelligent mathematics software solutions designed to modernize learning systems across Kenya and Africa.
-        </motion.p>
+
 
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -60,20 +67,6 @@ export function Hero() {
           >
             Contact Us
           </motion.button>
-        </motion.div>
-
-        {/* Hero Image */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1, delay: 0.8 }}
-          className="mt-20 relative"
-        >
-          <div className="backdrop-blur-xl bg-white/30 dark:bg-white/5 rounded-3xl border border-gray-200/50 dark:border-white/10 p-8 shadow-2xl">
-            <div className="aspect-video bg-gradient-to-br from-blue-100 to-purple-100 dark:from-gray-800 dark:to-gray-900 rounded-2xl overflow-hidden">
-              <img src={heroimage} alt="hero" />
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
