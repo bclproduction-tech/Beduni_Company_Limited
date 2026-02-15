@@ -13,7 +13,7 @@ export function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-24">
-      {/* Background Image */}
+  
       <div
         className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
         style={{
@@ -21,15 +21,15 @@ export function Hero() {
         }}
       />
 
-      {/* LIGHT overlay (reduced so image stays sharp) */}
+
       <div className="absolute inset-0 bg-white/7.5 dark:bg-black/7.5 -z-10" />
 
-      {/* Bottom Mist / Fog */}
+
       <div className="pointer-events-none absolute bottom-0 left-0 w-full h-80 -z-10">
         <div className="w-full h-full bg-gradient-to-t from-white/90 via-white/50 to-transparent dark:from-black/90 dark:via-black/50" />
       </div>
 
-      {/* CONTENT */}
+      
       <div className="max-w-6xl mx-auto text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
