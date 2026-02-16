@@ -11,12 +11,16 @@ export function Navigation() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      setActiveSection(id);
-      setMobileMenuOpen(false);
-    }
+    // Close menu first on mobile
+    setMobileMenuOpen(false);
+    setActiveSection(id);
+    // Add small delay to ensure menu closes and DOM updates before scrolling
+    setTimeout(() => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 100);
   };
 
   return (

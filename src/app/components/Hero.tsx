@@ -12,25 +12,24 @@ export function Hero() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-24">
-  
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `url(${heroimage})`,
-        }}
+    <section id="home" className="relative min-h-screen px-6 overflow-hidden pt-0 md:pt-24">
+
+      <img
+        src={heroimage}
+        alt="Hero background"
+        className="absolute top-0 left-0 w-full h-full object-cover object-center md:object-right -z-20"
       />
 
 
       <div className="absolute inset-0 bg-white/7.5 dark:bg-black/7.5 -z-10" />
 
 
-      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-80 -z-10">
+      <div className="pointer-events-none absolute bottom-0 left-0 w-full h-48 md:h-80 -z-10">
         <div className="w-full h-full bg-gradient-to-t from-white/90 via-white/50 to-transparent dark:from-black/90 dark:via-black/50" />
       </div>
 
       
-      <div className="max-w-6xl mx-auto text-center z-10">
+      <div className="absolute left-0 right-0 top-2 md:top-auto md:bottom-16 mx-auto max-w-6xl text-center z-10 px-6">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
