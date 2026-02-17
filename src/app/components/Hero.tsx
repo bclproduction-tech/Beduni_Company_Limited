@@ -2,6 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 import heroimage from '../../assets/hero.png';
+import mobileHero from '../../assets/hero-mobile.png';
 
 export function Hero() {
   const scrollToSection = (id: string) => {
@@ -14,11 +15,14 @@ export function Hero() {
   return (
     <section id="home" className="relative min-h-screen px-6 overflow-hidden pt-0 md:pt-24">
 
-      <img
-        src={heroimage}
-        alt="Hero background"
-        className="absolute top-0 left-0 w-full h-full object-cover object-center md:object-right -z-20"
-      />
+      <picture className="absolute inset-0 -z-20">
+        <source srcSet={mobileHero} media="(max-width: 640px)" />
+        <img
+          src={heroimage}
+          alt="Hero background"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-right -z-20"
+        />
+      </picture>
 
 
       <div className="absolute inset-0 bg-white/7.5 dark:bg-black/7.5 -z-10" />
