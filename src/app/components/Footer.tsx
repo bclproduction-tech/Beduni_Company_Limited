@@ -19,7 +19,7 @@ export function Footer() {
               Beduni Company Limited
             </h3>
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
-              Empowering African education through innovative mathematics software solutions. We build the future of digital learning, one platform at a time.
+              Empowering Kenyan education through innovative mathematics software solutions. We build the future of digital learning, one platform at a time.
             </p>
             <div className="flex gap-4">
               <a

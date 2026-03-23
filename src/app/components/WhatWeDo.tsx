@@ -7,23 +7,23 @@ export function WhatWeDo() {
   const services = [
     {
       icon: Calculator,
-      title: 'Digital Mathematics Platforms',
-      description: 'Interactive and engaging mathematics learning platforms that make complex concepts accessible and enjoyable for students.',
+      title: 'Digital Learning Platforms',
+      description: 'We build interactive mathematics platforms that simplify complex concepts while enhancing student engagement and overall academic performance.',
     },
     {
       icon: Code,
-      title: 'Educational Software Development',
-      description: 'Custom-built software solutions tailored to meet the unique needs of educational institutions across Africa.',
+      title: 'Custom Software Solutions',
+      description: 'We develop tailored education software designed to address institutional needs, improve efficiency and support effective learning delivery.',
     },
     {
       icon: GraduationCap,
-      title: 'Learning System Digitization',
-      description: 'Comprehensive digitization services that transform traditional learning systems into modern, efficient digital ecosystems.',
+      title: 'Education System Transformation',
+      description: 'We modernize traditional learning environments through comprehensive digitization, enabling efficient, scalable and technology-driven education systems.',
     },
     {
       icon: TrendingUp,
-      title: 'Scalable EdTech Solutions',
-      description: 'Future-ready educational technology solutions designed to scale with your institution and adapt to evolving needs.',
+      title: 'Scalable Technology Infrastructure',
+      description: 'Our solutions are built to scale seamlessly, supporting institutional growth while adapting to evolving educational and technological demands.'
     },
   ];
 

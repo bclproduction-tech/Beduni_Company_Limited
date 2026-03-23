@@ -5,20 +5,20 @@ import { Check } from 'lucide-react';
 export function WhyBeduni() {
   const reasons = [
     {
-      title: 'Built for African Education Systems',
-      description: 'Our solutions are designed with the unique challenges and opportunities of African education in mind.',
+      title: 'Contextual Relevance',
+      description: 'We design solutions aligned with Kenyan education realities, ensuring practical implementation and measurable impact across institutions.',
     },
     {
-      title: 'Innovation-Driven',
-      description: 'We leverage cutting-edge technology to deliver learning experiences that inspire and engage students.',
+      title: 'Innovation Excellence',
+      description: 'We leverage modern technologies to deliver forward-thinking solutions that enhance efficiency, engagement and overall learning experiences.',
     },
     {
-      title: 'Scalable and Future-Ready',
-      description: 'Our platforms grow with your institution, adapting to evolving educational needs and technologies.',
+      title: 'Scalable Architecture',
+      description: 'Our platforms are engineered for growth, enabling institutions to expand operations without compromising system performance or reliability.',
     },
     {
-      title: 'User-First Design Philosophy',
-      description: 'Every feature is crafted with educators and students in mind, ensuring intuitive and effective tools.',
+      title: 'User-Centric Design',
+      description: 'We prioritize intuitive design and functionality, ensuring seamless experiences for educators, administrators and learners across all platforms.'
     },
   ];
 

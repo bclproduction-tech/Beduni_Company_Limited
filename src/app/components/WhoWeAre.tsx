@@ -7,18 +7,18 @@ export function WhoWeAre() {
   const cards = [
     {
       icon: Building2,
-      title: 'Parent Company',
-      description: 'Beduni Company Limited serves as the parent organization, fostering innovation and excellence in educational technology solutions.',
+      title: 'Strategic Leadership',
+      description: 'Beduni Company Limited is the parent organization, providing strategic direction, governance and innovation across its digital ecosystem.',
     },
     {
       icon: Lightbulb,
-      title: 'Education Technology',
-      description: 'We specialize in developing cutting-edge mathematics software that transforms how students learn and engage with digital platforms.',
+      title: 'Technology Excellence',
+      description: 'We engineer advanced mathematics solutions that elevate digital learning experiences and deliver measurable academic outcomes.',
     },
     {
       icon: Globe,
-      title: 'African Roots',
-      description: 'Our solutions are designed with African educational needs at the core, ensuring relevance and effectiveness across diverse learning environments.',
+      title: 'African Insight',
+      description: 'Our solutions are grounded in Kenyan education systems, ensuring relevance, accessibility and meaningful impact across diverse environments.'
     },
   ];
 

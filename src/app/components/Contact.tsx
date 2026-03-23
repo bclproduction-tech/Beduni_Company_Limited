@@ -1,6 +1,9 @@
+
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { Send, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import emailjs from '@emailjs/browser';
+
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -9,15 +12,29 @@ export function Contact() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Mock form submission
     setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
+    setError(null);
+    try {
+      await emailjs.send(
+        'service_v8uowmh',
+        'template_3sgq8pa',
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+        },
+        'DiuH_Wk8Q-Y-IuzWm'
+      );
       setFormData({ name: '', email: '', message: '' });
-    }, 3000);
+    } catch (err) {
+      setError('Failed to send message. Please try again.');
+    } finally {
+      setTimeout(() => setSubmitted(false), 3000);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -54,6 +71,9 @@ export function Contact() {
           className="backdrop-blur-xl bg-white/70 dark:bg-white/5 rounded-3xl border border-gray-200/50 dark:border-white/10 p-10 shadow-2xl"
         >
           <form onSubmit={handleSubmit} className="space-y-6">
+            {error && (
+              <div className="text-red-600 dark:text-red-400 text-center mb-4">{error}</div>
+            )}
             <div>
               <label htmlFor="name" className="block text-gray-900 dark:text-white mb-2">
                 Name
