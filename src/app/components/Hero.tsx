@@ -20,7 +20,7 @@ export function Hero() {
         <img
           src={heroimage}
           alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover object-center md:object-right -z-20"
+          className="absolute inset-0 w-full h-full object-cover object-center md:object-right -z-20 hero-image"
         />
       </picture>
 

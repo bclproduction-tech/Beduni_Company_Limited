@@ -45,17 +45,15 @@ export function ProductEcosystem() {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="mt-8 text-center"
           >
-              <a href="https://bclproduction-tech.github.io/product/">
-  <motion.button
-    whileHover={{ scale: 1.05 }}
-    whileTap={{ scale: 0.95 }}
-    className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-500 dark:to-yellow-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
-  >
-    View Product
-  </motion.button>
-</a>
-
-
+            <a href="https://beduni.co.ke/product">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+                className="px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-gold-500 dark:to-yellow-600 text-white rounded-full shadow-lg hover:shadow-xl transition-all"
+              >
+                View Product
+              </motion.button>
+            </a>
           </motion.div>
         </div>
       </div>

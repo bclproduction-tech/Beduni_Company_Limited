@@ -17,25 +17,25 @@ export function TeamMessage() {
       name: 'Amina Mwangi',
       role: 'Founder & CEO',
       message: 'At Beduni, we believe mathematics is the foundation of innovation. Our mission is to build tools that empower learners across Kenya to unlock their full potential through accessible, intelligent digital education.',
-      image: 'https://images.unsplash.com/photo-1623594675959-02360202d4d6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMHBvcnRyYWl0fGVufDF8fHx8MTc2OTQ3NDc2NXww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg',
     },
     {
       name: 'David Ochieng',
       role: 'Product Lead',
       message: 'Every feature we design is crafted with Kenyan students and educators in mind. We are not just building software - we are creating learning experiences that inspire curiosity, foster understanding, and celebrate achievement.',
-      image: 'https://images.unsplash.com/photo-1672685667592-0392f458f46f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW4lMjBwb3J0cmFpdHxlbnwxfHx8fDE3Njk0NzQ3NjV8MA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg',
     },
     {
       name: 'Grace Kimathi',
       role: 'Education Strategist',
       message: 'Understanding the unique challenges of Kenyan classrooms drives everything we do. Our solutions bridge gaps in resources, connectivity, and accessibility - ensuring no learner is left behind in the digital revolution.',
-      image: 'https://images.unsplash.com/photo-1670881391783-9c55ba592f93?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhZnJpY2FuJTIwcHJvZmVzc2lvbmFsJTIwcG9ydHJhaXR8ZW58MXx8fHwxNzY5NTAyNTM2fDA&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg',
     },
     {
       name: 'James Kariuki',
       role: 'Lead Software Engineer',
       message: 'Technology should serve education, not complicate it. We build scalable, intuitive platforms that work seamlessly across devices and environments, bringing world-class mathematics education to every corner of Kenya.',
-      image: 'https://images.unsplash.com/photo-1531498860502-7c67cf02f657?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGRldmVsb3BtZW50JTIwY29kaW5nfGVufDF8fHx8MTc2OTQ5MzEwNnww&ixlib=rb-4.1.0&q=80&w=1080',
+      image: 'https://static.vecteezy.com/system/resources/thumbnails/002/318/271/small/user-profile-icon-free-vector.jpg',
     },
   ];
 

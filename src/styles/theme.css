@@ -187,3 +187,24 @@
     line-height: 1.5;
   }
 }
+
+@layer utilities {
+  .hero-image {
+    animation: hero-image-reveal 2.1s ease-out forwards;
+    clip-path: inset(0 100% 0 0);
+    transform: translateZ(0);
+  }
+
+  @keyframes hero-image-reveal {
+    0% {
+      clip-path: inset(0 100% 0 0);
+      opacity: 0.6;
+      transform: scale(1.03);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}

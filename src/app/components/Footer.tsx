@@ -1,5 +1,4 @@
 import React from 'react';
-import { Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
 
 export function Footer() {
   const scrollToSection = (id: string) => {
@@ -21,32 +20,6 @@ export function Footer() {
             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">
               Empowering Kenyan education through innovative mathematics software solutions. We build the future of digital learning, one platform at a time.
             </p>
-            <div className="flex gap-4">
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center hover:scale-110 transition-transform"
-              >
-                <Linkedin className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center hover:scale-110 transition-transform"
-              >
-                <Twitter className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center hover:scale-110 transition-transform"
-              >
-                <Instagram className="w-5 h-5 text-white" />
-              </a>
-              <a
-                href="#"
-                className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center hover:scale-110 transition-transform"
-              >
-                <Facebook className="w-5 h-5 text-white" />
-              </a>
-            </div>
           </div>
 
         

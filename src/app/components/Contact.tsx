@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
-import { Send, Linkedin, Twitter, Instagram, Facebook } from 'lucide-react';
+import { Send } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 
@@ -139,43 +139,6 @@ export function Contact() {
               )}
             </motion.button>
           </form>
-
-          
-          <div className="mt-10 pt-8 border-t border-gray-200 dark:border-white/10">
-            <p className="text-center text-gray-600 dark:text-gray-400 mb-4">
-              Connect with us
-            </p>
-            <div className="flex justify-center gap-4">
-              <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
-                className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
-              >
-                <Linkedin className="w-6 h-6 text-white" />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
-                className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
-              >
-                <Twitter className="w-6 h-6 text-white" />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
-                className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
-              >
-                <Instagram className="w-6 h-6 text-white" />
-              </motion.a>
-              <motion.a
-                whileHover={{ scale: 1.1, y: -2 }}
-                href="#"
-                className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 dark:from-gold-500 dark:to-yellow-600 flex items-center justify-center shadow-lg hover:shadow-xl transition-all"
-              >
-                <Facebook className="w-6 h-6 text-white" />
-              </motion.a>
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>

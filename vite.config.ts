@@ -4,7 +4,10 @@ import tailwindcss from '@tailwindcss/vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/Beduni_Company_Limited/',   
+  base: './',
+  build: {
+    outDir: 'dist',
+  },
 
   plugins: [
     // The React and Tailwind plugins are both required for Make, even if
